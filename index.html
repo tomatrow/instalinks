@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Goodlion</title>
+    <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js/instafeed.min.js"></script>
+    <script src="./build/instalinks.js"></script>
+</head>
+
+<body>
+    <div id="instalinks"></div>
+    <script>
+        const params = {
+            /* Get user id: https://www.instagram.com/USERNAME/?__a=1 */
+            userId: 8399716185,
+            /* Get token: http://instagram.pixelunion.net */
+            accessToken: '8399716185.1677ed0.0b25b9e1b3c84da89100bd2f8b80d23e',
+            clientId: '5fa9b3d7be894bd1a4060c76bb9cbf9a'
+        }
+        const instalinks = new Instalinks(params)
+        instalinks.run()
+
+    </script>
+</body>
+
+</html>
