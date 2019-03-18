@@ -108,8 +108,11 @@ class Instalinks {
             // save image data
             const parsedData = response.data.map(image => {
                 let match = []
-                if (image.caption && image.caption.text)
-                    match.push(...image.caption.text.match(Instalinks.linkRegex))
+                if (image.caption && image.caption.text) {
+                    let matchedLinks = image.caption.text.match(Instalinks.linkRegex)
+                    if (matchedLinks)
+                        match.push(...matchedLinks)
+                }
 
                 match = match.map(link => {
                     if (!link.startsWith("http"))
